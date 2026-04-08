@@ -91,3 +91,5 @@ def chat():
 if __name__ == "__main__":
     # Enabled debug=True and use_reloader=True for easier development
     app.run(debug=True, port=5000, use_reloader=True)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
