@@ -166,3 +166,5 @@ if __name__ == "__main__":
     print(f"\n🚀 OUMI SERVER V2 STARTING ON PORT {PORT}")
     print(f"URL: http://127.0.0.1:{PORT}/")
     app.run(debug=True, port=PORT, use_reloader=False)
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
