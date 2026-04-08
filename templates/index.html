@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NyayaVoice — Constitutional AI Legal Assistant</title>
+    <meta name="description" content="NyayaVoice is an AI-powered voice assistant providing constitutional and legal guidance for every citizen of India.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}?v=4.0">
+</head>
+<body>
+
+    <!-- Fixed Backgrounds -->
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="grid-overlay"></div>
+
+    <!-- ════════════════════════════════════════
+         HERO SECTION — Full Screen
+    ════════════════════════════════════════ -->
+    <section class="hero">
+
+        <!-- Top Navigation Bar -->
+        <nav class="navbar">
+            <div class="nav-brand">
+                <span class="nav-emblem">⚖</span>
+                <span class="nav-title">Nyaya<strong>Voice</strong></span>
+            </div>
+            <div class="nav-badge">
+                <span class="badge-dot"></span>
+                AI Online
+            </div>
+        </nav>
+
+        <!-- Scrolling Ticker -->
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <span>❖ Article 21 — Right to Life & Personal Liberty</span>
+                <span>❖ Article 14 — Equality Before the Law</span>
+                <span>❖ Article 19 — Freedom of Speech & Expression</span>
+                <span>❖ Article 32 — Right to Constitutional Remedies</span>
+                <span>❖ Habeas Corpus · Mandamus · Certiorari · Prohibition · Quo Warranto</span>
+                <span>❖ IPC · CrPC · CPC · Evidence Act · RTI Act</span>
+                <span>❖ Article 21 — Right to Life & Personal Liberty</span>
+                <span>❖ Article 14 — Equality Before the Law</span>
+                <span>❖ Article 19 — Freedom of Speech & Expression</span>
+                <span>❖ Article 32 — Right to Constitutional Remedies</span>
+                <span>❖ Habeas Corpus · Mandamus · Certiorari · Prohibition · Quo Warranto</span>
+                <span>❖ IPC · CrPC · CPC · Evidence Act · RTI Act</span>
+            </div>
+        </div>
+
+        <!-- Central Mic Interface — The Star of the Show -->
+        <div class="hero-center">
+
+            <!-- Left: Tag Lines -->
+            <div class="hero-left">
+                <div class="hero-tag">AI · Constitutional · Voice</div>
+                <h1 class="hero-title">Your Right to<br><span>Know the Law</span></h1>
+                <p class="hero-subtitle">Ask NyayaVoice about your fundamental rights, legal procedures, or any constitutional question — using just your voice.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-val">448</span>
+                        <span class="stat-label">Articles</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <span class="stat-val">12</span>
+                        <span class="stat-label">Schedules</span>
+                    </div>
+                    <div class="stat-div"></div>
+                    <div class="stat">
+                        <span class="stat-val">94</span>
+                        <span class="stat-label">Amendments</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Center: The Round Mic Agent Pod -->
+            <div class="hero-mic-container">
+                <!-- Glow Rings -->
+                <div class="glow-ring glow-ring-1"></div>
+                <div class="glow-ring glow-ring-2"></div>
+                <div class="glow-ring glow-ring-3"></div>
+
+                <!-- The Agent Visual -->
+                <div id="agent-visual" class="agent-visual idle">
+                    <div class="ring"></div>
+                    <div class="ring"></div>
+                    <div class="core">
+                        <svg class="mic-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z"/>
+                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+                            <line x1="12" x2="12" y1="19" y2="22"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Status & Button Below Orb -->
+                <p id="status-text" class="status-text">Awaiting your inquiry.</p>
+                <button id="mic-btn" class="mic-btn">
+                    <span id="btn-label">Consult NyayaVoice</span>
+                </button>
+            </div>
+
+            <!-- Right: Capabilities -->
+            <div class="hero-right">
+                <p class="cap-heading">What I Can Guide You On</p>
+                <div class="cap-list">
+                    <div class="cap-item">
+                        <span class="cap-icon">📜</span>
+                        <div>
+                            <h4>Constitutional Rights</h4>
+                            <p>Fundamental rights, duties & directives under the Indian Constitution.</p>
+                        </div>
+                    </div>
+                    <div class="cap-item">
+                        <span class="cap-icon">⚖️</span>
+                        <div>
+                            <h4>Legal Procedures</h4>
+                            <p>Civil, criminal & consumer court filing and procedural guidance.</p>
+                        </div>
+                    </div>
+                    <div class="cap-item">
+                        <span class="cap-icon">🏛️</span>
+                        <div>
+                            <h4>Statutory Provisions</h4>
+                            <p>Key provisions under IPC, CrPC, RTI, Evidence Act & more.</p>
+                        </div>
+                    </div>
+                    <div class="cap-item">
+                        <span class="cap-icon">🔍</span>
+                        <div>
+                            <h4>Case Law Context</h4>
+                            <p>Understand landmark Supreme Court judgments in plain language.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div><!-- end hero-center -->
+
+        <!-- Scroll Hint -->
+        <div class="scroll-hint">
+            <span>Conversation History</span>
+            <div class="scroll-arrow">↓</div>
+        </div>
+
+    </section>
+
+    <!-- ════════════════════════════════════════
+         TRANSCRIPT SECTION
+    ════════════════════════════════════════ -->
+    <section class="transcript-section">
+        <div class="transcript-header">
+            <div class="ts-line"></div>
+            <span>Session Transcript</span>
+            <div class="ts-line"></div>
+        </div>
+
+        <div class="transcript-area" id="transcript-scroll-area">
+            <div class="message system-message glass-panel">
+                <strong>⚠ Legal Advisory Notice</strong>
+                <span>NyayaVoice provides general constitutional and statutory guidance for informational purposes only. This does not constitute legal advice. For active legal matters, please consult a qualified advocate.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <span>⚖ NyayaVoice</span> — Constitutional AI for every Indian Citizen.
+        <span class="footer-disclaimer">Not a substitute for professional legal counsel.</span>
+    </footer>
+
+    <script src="{{ url_for('static', filename='script.js') }}?v=4.0"></script>
+</body>
+</html>
